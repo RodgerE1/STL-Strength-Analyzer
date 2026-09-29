@@ -1,0 +1,42 @@
+STL Strength Analyzer 1.0 verification
+
+16 analytic geometry cases passed:
+- Closed cube volume, thickness and cross-section areas
+- Thin plate normal-ray thickness
+- Known 4 mm neck and 24 mm² neck cross-section
+- Tensile axis orientation preference
+- Compression treated separately from tensile opening
+- Open mesh measurement withholding
+- Disconnected shell measurement withholding
+- Global inward winding
+- ASCII parsing and malformed facets
+- Binary header beginning with "solid"
+- Unit scaling of dimensions, sections and volume
+- Orientation export preserving geometry and volume
+- 90-degree build-plate rotation and export
+- Oversized build-volume candidates
+- Truncated, degenerate and non-manifold meshes
+- Nozzle and duty-dependent print presets
+
+Chromium UI verification passed:
+- Initial model and export buttons
+- Load, axis, nozzle, duty and material controls
+- ASA printer capability checks
+- Every viewer mode and original +Z orientation
+- Downloaded STL and text report
+- Custom STL loading and loading reset
+- Inch/custom units, invalid scale and malformed STL handling
+- Mobile layout without document overflow
+- No JavaScript page errors
+
+The downloaded orientation-export example was reloaded and retained
+44 triangles, a closed single shell, and its 7,680 mm³ volume.
+
+Large-model check:
+A 199,800-triangle closed cylinder was analyzed in approximately 9 seconds
+on the development environment. Its volume was 75,397.73 mm³ versus
+75,398.22 mm³ for the ideal smooth cylinder; the small difference is expected
+from faceting. These timings are not a benchmark of the user's PC.
+
+These checks validate software geometry cases and interface behavior.
+They do not validate a printed part's physical strength or a failure load.
